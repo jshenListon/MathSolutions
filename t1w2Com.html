@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCEA Surds & Quadratics Answer Sheet</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #2980b9;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #34495e;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        h1 { margin: 0; color: var(--primary); font-weight: 800; letter-spacing: 1px; }
+        .subtitle { color: #7f8c8d; font-size: 1.1rem; margin-top: 5px; }
+
+        /* Questions */
+        .question-block {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed var(--border);
+        }
+        .question-block:last-child { border-bottom: none; }
+
+        .q-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .q-num {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+        .q-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Steps */
+        .step-list {
+            margin-left: 20px;
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        .step-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+        .step-list li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #ecf0f1;
+            color: var(--primary);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            line-height: 25px;
+        }
+
+        /* Final Answer Box */
+        .final-answer {
+            background: #eafaf1;
+            border-left: 5px solid #27ae60;
+            padding: 15px 25px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .ans-label {
+            color: #27ae60;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: 0.2s;
+        }
+        .print-btn:hover { background: var(--accent); transform: translateY(-2px); }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 20px; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨 Print Answer Sheet</button>
+
+    <div class="container">
+        <header>
+            <h1>NCEA Level 2/3 Algebra</h1>
+            <div class="subtitle">Surds & Quadratic Formula Answer Sheet</div>
+        </header>
+
+        <div class="question-block">
+            <div class="q-header">
+                <span class="q-num">Q1</span>
+                <span class="q-title">Simplifying Algebraic Surds</span>
+            </div>
+            <p><strong>Problem:</strong> Write \(\displaystyle \frac{\sqrt{2p}}{\sqrt{2p} - \sqrt{p}}\) in the form \(a + \sqrt{a}\), where \(p\) and \(a\) are real constants.</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Factor the denominator:</strong><br>
+                    Both terms in the denominator contain \(\sqrt{p}\). Factor it out:<br>
+                    $$ \sqrt{2p} - \sqrt{p} = \sqrt{2}\sqrt{p} - \sqrt{p} = \sqrt{p}(\sqrt{2} - 1) $$
+                </li>
+                <li>
+                    <strong>Simplify the fraction:</strong><br>
+                    Substitute the factored denominator back into the fraction. The numerator \(\sqrt{2p}\) becomes \(\sqrt{2}\sqrt{p}\).<br>
+                    $$ \frac{\sqrt{2}\sqrt{p}}{\sqrt{p}(\sqrt{2} - 1)} $$
+                    Cancel the common factor \(\sqrt{p}\):
+                    $$ \frac{\sqrt{2}}{\sqrt{2} - 1} $$
+                </li>
+                <li>
+                    <strong>Rationalize the denominator:</strong><br>
+                    Multiply the numerator and denominator by the conjugate \((\sqrt{2} + 1)\):<br>
+                    $$ \frac{\sqrt{2}(\sqrt{2} + 1)}{(\sqrt{2} - 1)(\sqrt{2} + 1)} $$
+                </li>
+                <li>
+                    <strong>Expand and simplify:</strong><br>
+                    Numerator: \(\sqrt{2} \cdot \sqrt{2} + \sqrt{2} \cdot 1 = 2 + \sqrt{2}\)<br>
+                    Denominator: \((\sqrt{2})^2 - 1^2 = 2 - 1 = 1\)<br>
+                    $$ \frac{2 + \sqrt{2}}{1} = 2 + \sqrt{2} $$
+                </li>
+            </ul>
+
+            <div class="final-answer">
+                <span class="ans-label">Final Answer</span>
+                $$ 2 + \sqrt{2} $$
+                <div style="font-size:0.9rem; color:#7f8c8d; margin-top:5px;">(Therefore \(a = 2\))</div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="q-header">
+                <span class="q-num">Q2</span>
+                <span class="q-title">Expanding Surds</span>
+            </div>
+            <p><strong>Problem:</strong> Write \((5 - 2\sqrt{p})^2\) in the form \(a + bp + c\sqrt{p}\) where \(a, b,\) and \(c\) are integers.</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Expand the bracket:</strong><br>
+                    Use the perfect square rule \((x - y)^2 = x^2 - 2xy + y^2\):<br>
+                    $$ (5 - 2\sqrt{p})(5 - 2\sqrt{p}) $$
+                    $$ = 5^2 - 2(5)(2\sqrt{p}) + (2\sqrt{p})^2 $$
+                </li>
+                <li>
+                    <strong>Calculate individual terms:</strong><br>
+                    First term: \(5^2 = 25\)<br>
+                    Middle term: \(-2 \times 5 \times 2\sqrt{p} = -20\sqrt{p}\)<br>
+                    Last term: \((2\sqrt{p})^2 = 4p\)
+                </li>
+                <li>
+                    <strong>Combine and Arrange:</strong><br>
+                    Combine terms: \(25 - 20\sqrt{p} + 4p\)<br>
+                    Rearrange to match form \(a + bp + c\sqrt{p}\):
+                </li>
+            </ul>
+
+            <div class="final-answer">
+                <span class="ans-label">Final Answer</span>
+                $$ 25 + 4p - 20\sqrt{p} $$
+                <div style="font-size:0.9rem; color:#7f8c8d; margin-top:5px;">(Where \(a=25, b=4, c=-20\))</div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="q-header">
+                <span class="q-num">Q3</span>
+                <span class="q-title">Rationalizing Surds</span>
+            </div>
+            <p><strong>Problem:</strong> Write \(\displaystyle \frac{12k}{1 + \sqrt{5}}\) in the form \(ak + bk\sqrt{5}\), where \(a\) and \(b\) are integers.</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Setup Rationalization:</strong><br>
+                    Multiply by the conjugate of the denominator \((1 - \sqrt{5})\):<br>
+                    $$ \frac{12k(1 - \sqrt{5})}{(1 + \sqrt{5})(1 - \sqrt{5})} $$
+                </li>
+                <li>
+                    <strong>Expand Numerator and Denominator:</strong><br>
+                    Numerator: \(12k(1) - 12k(\sqrt{5}) = 12k - 12k\sqrt{5}\)<br>
+                    Denominator (Difference of Squares): \(1^2 - (\sqrt{5})^2 = 1 - 5 = -4\)
+                </li>
+                <li>
+                    <strong>Simplify Fraction:</strong><br>
+                    $$ \frac{12k - 12k\sqrt{5}}{-4} $$
+                    Divide both terms in the numerator by \(-4\):<br>
+                    $$ \frac{12k}{-4} - \frac{12k\sqrt{5}}{-4} $$
+                    $$ = -3k - (-3k\sqrt{5}) $$
+                </li>
+            </ul>
+
+            <div class="final-answer">
+                <span class="ans-label">Final Answer</span>
+                $$ -3k + 3k\sqrt{5} $$
+                <div style="font-size:0.9rem; color:#7f8c8d; margin-top:5px;">(Where \(a=-3\) and \(b=3\))</div>
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="q-header">
+                <span class="q-num">Q4</span>
+                <span class="q-title">Quadratic Equation (Complex Roots)</span>
+            </div>
+            <p><strong>Problem:</strong> Solve \(z^2 + 6kz + 15k^2 = 0\) for \(z\) in terms of \(k\). Give solution in form \(ak \pm \sqrt{b}ki\).</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Identify Coefficients:</strong><br>
+                    \(a = 1\), \(b = 6k\), \(c = 15k^2\)
+                </li>
+                <li>
+                    <strong>Apply Quadratic Formula:</strong><br>
+                    $$ z = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+                    $$ z = \frac{-6k \pm \sqrt{(6k)^2 - 4(1)(15k^2)}}{2(1)} $$
+                </li>
+                <li>
+                    <strong>Simplify Discriminant:</strong><br>
+                    Inside square root: \(36k^2 - 60k^2 = -24k^2\)
+                </li>
+                <li>
+                    <strong>Simplify the Root (Imaginary Numbers):</strong><br>
+                    $$ \sqrt{-24k^2} = \sqrt{24} \cdot \sqrt{k^2} \cdot \sqrt{-1} $$
+                    Simplify surd \(\sqrt{24} = \sqrt{4 \times 6} = 2\sqrt{6}\)<br>
+                    Root becomes: \(2k\sqrt{6}i\)
+                </li>
+                <li>
+                    <strong>Final Calculation:</strong><br>
+                    $$ z = \frac{-6k \pm 2k\sqrt{6}i}{2} $$
+                    Divide all terms by 2:
+                    $$ z = -3k \pm k\sqrt{6}i $$
+                </li>
+            </ul>
+
+            <div class="final-answer">
+                <span class="ans-label">Final Answer</span>
+                $$ z = -3k \pm \sqrt{6}ki $$
+            </div>
+        </div>
+
+        <div class="question-block">
+            <div class="q-header">
+                <span class="q-num">Q5</span>
+                <span class="q-title">Quadratic Equation (Surd Roots)</span>
+            </div>
+            <p><strong>Problem:</strong> Solve \(x^2 - 6kx = k^2\) for \(x\). Simplify answer as far as possible.</p>
+            
+            <ul class="step-list">
+                <li>
+                    <strong>Rearrange to standard form:</strong><br>
+                    \(x^2 - 6kx - k^2 = 0\)
+                </li>
+                <li>
+                    <strong>Identify Coefficients:</strong><br>
+                    \(a = 1\), \(b = -6k\), \(c = -k^2\)
+                </li>
+                <li>
+                    <strong>Apply Quadratic Formula:</strong><br>
+                    $$ x = \frac{-(-6k) \pm \sqrt{(-6k)^2 - 4(1)(-k^2)}}{2(1)} $$
+                    $$ x = \frac{6k \pm \sqrt{36k^2 + 4k^2}}{2} $$
+                </li>
+                <li>
+                    <strong>Simplify Discriminant:</strong><br>
+                    Inside root: \(36k^2 + 4k^2 = 40k^2\)
+                </li>
+                <li>
+                    <strong>Simplify the Surd:</strong><br>
+                    $$ \sqrt{40k^2} = \sqrt{4 \cdot 10 \cdot k^2} = 2k\sqrt{10} $$
+                </li>
+                <li>
+                    <strong>Final Solution:</strong><br>
+                    $$ x = \frac{6k \pm 2k\sqrt{10}}{2} $$
+                    Divide by 2:
+                    $$ x = 3k \pm k\sqrt{10} $$
+                </li>
+            </ul>
+
+            <div class="final-answer">
+                <span class="ans-label">Final Answer</span>
+                $$ x = 3k \pm k\sqrt{10} $$
+                <div style="font-size:0.9rem; color:#7f8c8d; margin-top:5px;">(Factored form: \(x = k(3 \pm \sqrt{10})\))</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
