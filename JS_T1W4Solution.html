@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Solutions: Simultaneous Equations & Algebra</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #16a085;
+            margin-top: 30px;
+        }
+        .problem-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .solution {
+            background-color: #e8f6f3;
+            border-left: 4px solid #16a085;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        .answer {
+            font-weight: bold;
+            color: #d35400;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment Solutions: T1W4 Simultaneous Equations</h1>
+
+    <div class="problem-box">
+        <h2>1. Simultaneous Equations (Pencils & Erasers)</h2>
+        <p><strong>Problem:</strong> Two pencils and three erasers cost $3.05. One pencil and one eraser cost $1.10. [cite_start]What does a pencil cost? [cite: 1, 2]</p>
+        
+        <div class="solution">
+            <p>Let \( p \) be the cost of a pencil and \( e \) be the cost of an eraser.</p>
+            <p>We can form the following simultaneous equations:</p>
+            <p>
+                (1) \( 2p + 3e = 3.05 \) <br>
+                (2) \( p + e = 1.10 \)
+            </p>
+            <p><strong>Step 1:</strong> Rearrange equation (2) to solve for \( e \):</p>
+            <p>\( e = 1.10 - p \)</p>
+            <p><strong>Step 2:</strong> Substitute this into equation (1):</p>
+            <p>\( 2p + 3(1.10 - p) = 3.05 \)</p>
+            <p>\( 2p + 3.30 - 3p = 3.05 \)</p>
+            <p>\( -p = 3.05 - 3.30 \)</p>
+            <p>\( -p = -0.25 \implies p = 0.25 \)</p>
+            <p class="answer">Answer: A pencil costs $0.25.</p>
+        </div>
+    </div>
+
+    <div class="problem-box">
+        <h2>2. Sports Team Ages</h2>
+        <p><strong>Problem:</strong> In a team, all students are 13 or 14 years old. [cite_start]The sum of ages is 325. Add a condition to solve for the number of students. [cite: 5, 6]</p>
+        
+        <div class="solution">
+            <p>Let \( x \) be the number of 13-year-olds and \( y \) be the number of 14-year-olds.</p>
+            <p>The current equation is: \( 13x + 14y = 325 \).</p>
+            <p>To make this solvable as a system of simultaneous equations, we need a second independent linear equation. A logical condition to add is the <strong>total number of students</strong> in the team.</p>
+            <p><strong>Proposed Condition:</strong> "There are 24 students in the team."</p>
+            <p><strong>New System:</strong><br>
+            (1) \( 13x + 14y = 325 \)<br>
+            (2) \( x + y = 24 \)</p>
+            <p><strong>Solving:</strong><br>
+            From (2), \( x = 24 - y \). Substitute into (1):<br>
+            \( 13(24 - y) + 14y = 325 \)<br>
+            \( 312 - 13y + 14y = 325 \)<br>
+            \( y = 13 \)</p>
+            <p>Substitute back: \( x = 24 - 13 = 11 \).</p>
+            <p class="answer">Answer: Add the condition "There are 24 students in the team" (or similar valid total). Solution: 11 students are 13 years old, 13 students are 14 years old.</p>
+        </div>
+    </div>
+
+    <div class="problem-box">
+        <h2>3. Kitty's Treasure Map</h2>
+        [cite_start]<p><strong>Problem:</strong> Follow mathematical directions to find the treasure's location relative to the starting rock. [cite: 9-12]</p>
+        
+        <div class="solution">
+            <h3>Part (a): Initial Position</h3>
+            <p>Start facing East. Rotate 30° anti-clockwise (Bearing N 60° E). Walk 5m.</p>
+            <p>Coordinates \((x_1, y_1)\):<br>
+            \( x_1 = 5 \cos(30^\circ) \approx 4.330 \) m (East)<br>
+            \( y_1 = 5 \sin(30^\circ) = 2.500 \) m (North)</p>
+
+            <h3>Part (b): Fibonacci Walk</h3>
+            <p>Sequence \( f(n) \): 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...</p>
+            <ul>
+                <li>\( f(6) = 8 \) m North</li>
+                <li>\( f(7) = 13 \) m East</li>
+                <li>\( f(8) = 21 \) m North</li>
+                <li>\( f(9) = 34 \) m East</li>
+            </ul>
+            <p>Total change in (b):<br>
+            East change: \( 13 + 34 = 47 \) m<br>
+            North change: \( 8 + 21 = 29 \) m</p>
+
+            <h3>Part (c): Simultaneous Equations</h3>
+            <p>Solve:<br>
+            (1) \( 3x + 2y = 22 \)<br>
+            (2) \( 7x - 3y = 36 \)</p>
+            <p>Multiply (1) by 3 and (2) by 2:<br>
+            (3) \( 9x + 6y = 66 \)<br>
+            (4) \( 14x - 6y = 72 \)</p>
+            <p>Add (3) and (4):<br>
+            \( 23x = 138 \implies x = 6 \)</p>
+            <p>Substitute \( x=6 \) into (1):<br>
+            \( 3(6) + 2y = 22 \implies 18 + 2y = 22 \implies 2y = 4 \implies y = 2 \)</p>
+            <p>Instruction: Walk \( x \) (6m) West and \( y \) (2m) South.</p>
+
+            <h3>Final Calculation</h3>
+            <p><strong>Total East:</strong> \( 4.330 + 47 - 6 = 45.33 \) m<br>
+            <strong>Total North:</strong> \( 2.500 + 29 - 2 = 29.50 \) m</p>
+            <p class="answer">Answer: 45.3 metres East, 29.5 metres North (3 s.f.)</p>
+        </div>
+    </div>
+
+    <div class="problem-box">
+        <h2>4. UOJMC: Polygons (Squares and Hexagons)</h2>
+        [cite_start]<p><strong>Problem:</strong> Determine formulas for the number of squares (\(s\)) and hexagons (\(h\)) at stage \(n\), then solve inequalities. [cite: 22-25]</p>
+        
+        <div class="solution">
+            <p>Based on the patterns described and the table data:</p>
+            <ul>
+                <li><strong>Squares (\(s\)):</strong> The sequence is 1, 9, 25, 49... This follows the formula \( s_n = (2n-1)^2 \).</li>
+                <li><strong>Hexagons (\(h\)):</strong> The sequence is 1, 7, 19... This follows the formula for centered hexagonal numbers: \( h_n = 3n^2 - 3n + 1 \).</li>
+            </ul>
+
+            <p><strong>(a) Find s for:</strong></p>
+            <ul>
+                <li>(i) \( n=3 \): \( s = (2(3)-1)^2 = 5^2 = 25 \)</li>
+                <li>(ii) \( n=5 \): \( s = (2(5)-1)^2 = 9^2 = 81 \)</li>
+            </ul>
+
+            <p><strong>(b) Find h for:</strong></p>
+            <ul>
+                <li>(i) \( n=4 \): \( h = 3(4)^2 - 3(4) + 1 = 48 - 12 + 1 = 37 \)</li>
+                <li>(ii) \( n=5 \): \( h = 3(5)^2 - 3(5) + 1 = 75 - 15 + 1 = 61 \)</li>
+            </ul>
+
+            <p><strong>(c) Find smallest \( n \) such that:</strong></p>
+            <p>(i) \( s > 300 \):<br>
+            \( (2n-1)^2 > 300 \)<br>
+            \( 2n-1 > \sqrt{300} \approx 17.32 \)<br>
+            \( 2n > 18.32 \implies n > 9.16 \)<br>
+            <span class="answer">Smallest integer n = 10</span></p>
+
+            <p>(ii) \( h > 200 \):<br>
+            \( 3n^2 - 3n + 1 > 200 \)<br>
+            \( 3n^2 - 3n - 199 > 0 \)<br>
+            Using quadratic formula roots are approx \( \frac{3 \pm \sqrt{9 - 4(3)(-199)}}{6} \approx \frac{3 \pm 48.9}{6} \).<br>
+            Positive root \( \approx 8.65 \).<br>
+            <span class="answer">Smallest integer n = 9</span></p>
+
+            <p><strong>(d) Perimeter for Hexagon at \( n=5 \):</strong></p>
+            <p>The perimeter of the \( n \)th hexagonal shape consists of \( 6(2n-1) \) outer edges? Or is it simpler? For standard hexagonal growth, the number of unit lengths on one side is \( n \). The perimeter is \( 6 \times (n \text{ units}) \)? Actually, looking at the growth pattern, the side length is usually \( n \) units (where n=1 has side 1).<br>
+            However, we are given the perimeter of the <em>regular hexagon</em> (the unit) is 6cm, so side length = 1cm.<br>
+            For \( n=5 \), the side length of the large hexagon is \( 2n-1 \) units? Let's check \( n=2 \). It has 3 units per side? No, usually side length is \( n \).<br>
+            <em>Assumption:</em> Based on standard centered hexagon diagrams, the side length is \( n \) units.<br>
+            Perimeter = \( 6 \times n \times 1\text{cm} \).<br>
+            For \( n=5 \): Perimeter = \( 30 \) cm.<br>
+            <em>Alternative Check:</em> If side is \( 2n-1 \) (like the square pattern), perimeter is \( 6(9) = 54 \). Given the ambiguity without the diagram, \( 6(2n-1) \) is consistent with the square diagonal growth, but \( 6(n) \) is consistent with edge length growth. However, usually "n=1" is side 1. "n=2" adds a layer, making side 2. So \( n=5 \) has side 5.<br>
+            <span class="answer">Likely Answer: 30 cm</span> (assuming side length grows by 1 per step).</p>
+        </div>
+    </div>
+
+    <div class="problem-box">
+        <h2>5. Number Theory Algebra</h2>
+        <p><strong>Definitions:</strong> \( p \) is the \( n \)th prime. \( s(n) \) is distance to closest square. [cite_start]\( c(n) \) is distance to closest cube. [cite: 46-49]</p>
+        
+        <div class="solution">
+            <h3>Part (a): Find v, w, s(n)</h3>
+            <p><strong>(i) \( n=7, p=17 \)</strong><br>
+            Squares near 17: \( 16 (4^2) \) and \( 25 (5^2) \).<br>
+            \( v=16, w=25 \).<br>
+            \( |17-16|=1, |25-17|=8 \). Closest is 16.<br>
+            <span class="answer">s(7) = 1</span></p>
+
+            <p><strong>(ii) \( n=10, p=29 \)</strong><br>
+            Squares near 29: \( 25 (5^2) \) and \( 36 (6^2) \).<br>
+            \( v=25, w=36 \).<br>
+            \( |29-25|=4, |36-29|=7 \). Closest is 25.<br>
+            <span class="answer">s(10) = 4</span></p>
+
+            <h3>Part (b): Smallest n where \( s(n) > 5 \)</h3>
+            <p>We check primes \( p \) starting from where we left off ($p=29$).</p>
+            <ul>
+                <li>\( n=11, p=31 \): Closest sq 25 or 36. \( |36-31|=5 \). (Not > 5)</li>
+                <li>\( n=12, p=37 \): Closest sq 36. \( |37-36|=1 \).</li>
+                <li>\( n=13, p=41 \): Closest sq 36 or 49. \( |41-36|=5 \). (Not > 5)</li>
+                <li>\( n=14, p=43 \): Closest sq 36 or 49. \( |49-43|=6 \).</li>
+            </ul>
+            <p class="answer">Answer: n = 14 (where p = 43, s(14) = 6)</p>
+
+            <h3>Part (c): Find y, z, c(n)</h3>
+            <p><strong>(i) \( n=7, p=17 \)</strong><br>
+            Cubes near 17: \( 8 (2^3) \) and \( 27 (3^3) \).<br>
+            \( y=8, z=27 \).<br>
+            \( |17-8|=9, |27-17|=10 \).<br>
+            <span class="answer">c(7) = 9</span></p>
+
+            <p><strong>(ii) \( n=16, p=53 \)</strong><br>
+            Cubes near 53: \( 27 (3^3) \) and \( 64 (4^3) \).<br>
+            \( y=27, z=64 \).<br>
+            \( |53-27|=26, |64-53|=11 \).<br>
+            <span class="answer">c(16) = 11</span></p>
+
+            <h3>Part (d): Smallest n where \( c(n) > 10 \)</h3>
+            <p>We found \( c(16) = 11 > 10 \). Is there a smaller \( n \)? Check descending from \( p=53 \).</p>
+            <ul>
+                <li>\( n=15, p=47 \): Near 27, 64. \( |64-47|=17 \). (>10)</li>
+                <li>\( n=14, p=43 \): Near 27, 64. \( |64-43|=21 \). (>10) Wait, closer to 27? \( 43-27=16 \). \( c(14)=16 \). (>10)</li>
+                <li>\( n=13, p=41 \): Near 27, 64. \( 41-27=14 \). \( c(13)=14 \). (>10)</li>
+                <li>\( n=12, p=37 \): Near 27, 64. \( 37-27=10 \). (Not > 10)</li>
+            </ul>
+            <p class="answer">Answer: n = 13 (where p = 41, c(13) = 14)</p>
+
+            <h3>Part (e): Find n where \( s(n) = c(n) \)</h3>
+            <p>We know \( n=1 \) works. Let's check higher primes for overlaps between squares and cubes (specifically near 64, since \( 8^2 = 4^3 = 64 \)).</p>
+            <p>Consider primes near 64. The prime <strong>61</strong> looks promising.</p>
+            <ul>
+                <li><strong>Prime \( p = 61 \):</strong></li>
+                <li>Squares: 49, 64. Closest is 64. \( s(n) = 64 - 61 = 3 \).</li>
+                <li>Cubes: 27, 64. Closest is 64. \( c(n) = 64 - 61 = 3 \).</li>
+                <li>Since \( s(n) = c(n) = 3 \), this is a solution.</li>
+                <li>Which prime is 61?</li>
+                <li>Primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61.</li>
+                <li>Count: 61 is the 18th prime.</li>
+            </ul>
+            <p class="answer">Answer: n = 18, p = 61, s(18) = 3, c(18) = 3.</p>
+        </div>
+    </div>
+
+</body>
+</html>
