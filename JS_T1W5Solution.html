@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Solutions: More Algebra Skills</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+    window.MathJax = {
+      tex: { 
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true 
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .solution-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid #2563eb;
+        }
+        .part-header {
+            font-weight: 700;
+            color: #1e40af;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.125rem;
+        }
+        .math-block {
+            background-color: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #93c5fd;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        .conclusion {
+            font-weight: 700;
+            color: #047857;
+            background-color: #ecfdf5;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-black text-gray-900 mb-2">Assignment Solutions</h1>
+            <h2 class="text-xl text-gray-600 font-medium">More Algebra Skills</h2>
+        </header>
+
+        <div class="solution-card">
+            <h2 class="text-2xl font-black text-gray-800 border-b-2 border-gray-100 pb-2 mb-4">Question 1: Resistors in Parallel</h2>
+            <p class="text-gray-600 italic">The harmonic mean formula for two resistors in parallel is $R_{combined} = \frac{R_{1} \times R_{2}}{R_{1} + R_{2}}$</p>
+
+            <div class="part-header">a) Prove that if two identical resistors ($R$) are connected in parallel, the combined resistance is $\frac{R}{2}$.</div>
+            <p>Let both resistors be identical, so $R_1 = R$ and $R_2 = R$. Substitute these into the formula:</p>
+            <div class="math-block">
+                $$R_{combined} = \frac{R \times R}{R + R} = \frac{R^2}{2R}$$
+            </div>
+            <p>By cancelling out one $R$ from the numerator and the denominator, we get:</p>
+            <div class="conclusion">$$R_{combined} = \frac{R}{2}$$</div>
+
+            <div class="part-header">b) Prove that if we connect three identical resistors in parallel, the total resistance is $\frac{R}{3}$.</div>
+            <p>We can solve this by combining the resistors in steps using the conclusion from part (a).</p>
+            <ol class="list-decimal list-inside space-y-2 mt-2">
+                <li>Combine the first two resistors ($R_1$ and $R_2$). Their equivalent resistance is $R_{1,2} = \frac{R}{2}$.</li>
+                <li>Treat this equivalent resistance $R_{1,2}$ as a single resistor and connect it in parallel with the third identical resistor, $R_3 = R$.</li>
+                <li>Apply the parallel resistance formula again:</li>
+            </ol>
+            <div class="math-block">
+                $$R_{total} = \frac{R_{1,2} \times R_3}{R_{1,2} + R_3} = \frac{\left(\frac{R}{2}\right) \times R}{\left(\frac{R}{2}\right) + R}$$
+                $$R_{total} = \frac{\frac{R^2}{2}}{\frac{3R}{2}}$$
+                $$R_{total} = \frac{R^2}{2} \times \frac{2}{3R}$$
+            </div>
+            <div class="conclusion">$$R_{total} = \frac{R}{3}$$</div>
+
+            <div class="part-header">c) Find a general formula for the total resistance of three different resistors $R_1$, $R_2$, and $R_3$ connected in parallel.</div>
+            <p>We follow the same two-step process, but keep the variables distinct.</p>
+            <ol class="list-decimal list-inside space-y-2 mt-2">
+                <li>First, combine $R_1$ and $R_2$: 
+                    $$R_{1,2} = \frac{R_1 R_2}{R_1 + R_2}$$
+                </li>
+                <li>Next, combine $R_{1,2}$ in parallel with $R_3$:</li>
+            </ol>
+            <div class="math-block">
+                $$R_{total} = \frac{\left(\frac{R_1 R_2}{R_1 + R_2}\right) \times R_3}{\left(\frac{R_1 R_2}{R_1 + R_2}\right) + R_3}$$
+            </div>
+            <p>To simplify this complex fraction, multiply the numerator and the denominator by $(R_1 + R_2)$:</p>
+            <div class="math-block">
+                $$R_{total} = \frac{R_1 R_2 R_3}{R_1 R_2 + R_3(R_1 + R_2)}$$
+            </div>
+            <p>Expanding the denominator yields the final general formula:</p>
+            <div class="conclusion">$$R_{total} = \frac{R_1 R_2 R_3}{R_1 R_2 + R_1 R_3 + R_2 R_3}$$</div>
+        </div>
+
+        <div class="solution-card" style="border-top-color: #9333ea;">
+            <h2 class="text-2xl font-black text-gray-800 border-b-2 border-gray-100 pb-2 mb-4">Question 2: ISBN Validation</h2>
+            <p class="text-gray-600 italic">An ISBN is valid if the 10th digit is the remainder of the weighted sum of the first 9 digits divided by 11.</p>
+
+            <div class="part-header text-purple-700">a) Is the string 038696617X an ISBN?</div>
+            <p>To verify the ISBN, we calculate the weighted sum of the first 9 digits and find its remainder when divided by 11.</p>
+            <p>Substitute the digits $(0, 3, 8, 6, 9, 6, 6, 1, 7)$ into the sum formula:</p>
+            <div class="math-block">
+                $$\text{Sum} = 1(0) + 2(3) + 3(8) + 4(6) + 5(9) + 6(6) + 7(6) + 8(1) + 9(7)$$
+                $$\text{Sum} = 0 + 6 + 24 + 24 + 45 + 36 + 42 + 8 + 63 = 248$$
+            </div>
+            <p>Divide 248 by 11 to find the remainder:</p>
+            <div class="math-block">
+                $$248 \div 11 = 22 \text{ with a remainder of } 6$$
+                <span class="text-sm text-gray-500">(Since $22 \times 11 = 242$, and $248 - 242 = 6$)</span>
+            </div>
+            <p>The remainder is 6, so the 10th digit should be 6. However, the string ends in 'X' (which represents a remainder of 10). Because $6 \neq 10$, this string is <span class="font-bold text-red-600">NOT</span> a valid ISBN.</p>
+
+            <div class="part-header text-purple-700">b) The ISBN reads 0321149Z20, where 'Z' is unknown. Find Z.</div>
+            <p>Setup the sum with the known digits ($x_1=0, x_2=3, x_3=2, x_4=1, x_5=1, x_6=4, x_7=9, x_8=Z, x_9=2$):</p>
+            <div class="math-block">
+                $$\text{Sum} = 1(0) + 2(3) + 3(2) + 4(1) + 5(1) + 6(4) + 7(9) + 8(Z) + 9(2)$$
+                $$\text{Sum} = 0 + 6 + 6 + 4 + 5 + 24 + 63 + 8Z + 18 = 126 + 8Z$$
+            </div>
+            <p>Since the 10th digit is 0, the total sum $(126 + 8Z)$ must yield a remainder of 0 when divided by 11 (it must be a perfect multiple of 11).</p>
+            <p>Let's find the remainder of 126 divided by 11: $126 = (11 \times 11) + 5$. This means $5 + 8Z$ must be a multiple of 11.</p>
+            <p>Because $Z$ must be a single digit between 0 and 9, we can test values. If we test <strong>$Z = 9$</strong>:</p>
+            <div class="math-block">
+                $$5 + 8(9) = 5 + 72 = 77$$
+            </div>
+            <p>Since 77 is a multiple of 11 ($11 \times 7$), the missing digit is:</p>
+            <div class="conclusion" style="color: #6b21a8; background-color: #f3e8ff;">$$Z = 9$$</div>
+
+            <div class="part-header text-purple-700">c) Show that if the 4th and 5th digits (which are different) are transposed, the resulting string is not an ISBN.</div>
+            <ol class="list-decimal list-inside space-y-2 mt-2">
+                <li>Let the original correct sum be $S = x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5 + \dots + 9x_9$. The remainder of $S \div 11$ gives the 10th digit.</li>
+                <li>If the 4th and 5th digits are transposed, the sequence stays exactly the same except the new 4th digit is $x_5$ and the new 5th digit is $x_4$.</li>
+                <li>The new sum is $S_{new} = x_1 + 2x_2 + 3x_3 + 4x_5 + 5x_4 + \dots + 9x_9$.</li>
+                <li>Let's find the difference between the new sum and the old sum:
+                    <div class="math-block">
+                        $$S_{new} - S = (4x_5 + 5x_4) - (4x_4 + 5x_5) = x_4 - x_5$$
+                    </div>
+                </li>
+                <li>For the transposed string to accidentally still be a valid ISBN (sharing the exact same 10th check digit), the new sum $S_{new}$ must leave the same remainder as $S$ when divided by 11. Mathematically, this means their difference $(x_4 - x_5)$ must be a multiple of 11.</li>
+                <li>Since $x_4$ and $x_5$ are single digits from 0 to 9, the absolute maximum difference between them is 9. The only way their difference can be a multiple of 11 is if the difference is exactly 0 (which means $x_4 = x_5$).</li>
+                <li>However, the problem explicitly states that the 4th and 5th digits are <strong>different</strong>. Therefore, $x_4 - x_5 \neq 0$, meaning the difference cannot possibly be a multiple of 11.</li>
+                <li>Because the difference isn't a multiple of 11, the sum's remainder permanently changes, meaning the original 10th digit will no longer match, thus <strong>invalidating the ISBN</strong>.</li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>
