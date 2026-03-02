@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions: Notations & Patterns</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+    window.MathJax = {
+      tex: { 
+          inlineMath: [['$', '$'], ['\\(', '\\)']], 
+          displayMath: [['$$', '$$'], ['\\[', '\\]']], 
+          processEscapes: true 
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            background-color: #f8fafc; 
+            color: #1e293b; 
+        }
+        .solution-card { 
+            background-color: #ffffff; 
+            border-radius: 1rem; 
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); 
+            border: 1px solid #e2e8f0; 
+            overflow: hidden; 
+            margin-bottom: 2.5rem; 
+        }
+        .math-box { 
+            background-color: #f1f5f9; 
+            padding: 1.25rem; 
+            border-radius: 0.5rem; 
+            border: 1px solid #cbd5e1; 
+            overflow-x: auto; 
+            margin: 1rem 0;
+            font-size: 1.05rem;
+        }
+        .final-answer { 
+            background-color: #eef2ff; 
+            color: #4338ca; 
+            padding: 1rem; 
+            border-radius: 0.5rem; 
+            border: 1px solid #c7d2fe; 
+            font-weight: 800; 
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .step-title {
+            font-weight: 800;
+            color: #334155;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pt-12 pb-12">
+
+    <div class="max-w-4xl mx-auto px-6 w-full flex-grow">
+        
+        <div class="flex items-center gap-4 mb-10 border-b-4 border-indigo-600 pb-6">
+            <div class="bg-indigo-600 p-3 rounded-xl text-white">
+                <i data-lucide="book-open" class="w-8 h-8"></i>
+            </div>
+            <div>
+                <h1 class="font-black text-4xl tracking-tight text-slate-800">Assignment Solutions</h1>
+                <p class="text-slate-500 font-medium mt-1 text-lg">Term 1 Week 5: Notations and Patterns</p>
+            </div>
+        </div>
+
+        <div class="solution-card">
+            <div class="bg-indigo-50 border-b border-indigo-100 p-5 font-black text-indigo-900 flex gap-3 items-center text-xl">
+                <span class="bg-indigo-600 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm shadow-md">1</span>
+                Arithmetic, Geometric, and Harmonic Means
+            </div>
+            <div class="p-8">
+                
+                <div class="mb-8 border-b border-slate-100 pb-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">(a) Calculate A, G, and H for the set {4, 6.3, 7.2}</h3>
+                    <p class="text-slate-600 mb-2">Given $n = 3$. We substitute the values into the respective formulas and round to two decimal places.</p>
+                    
+                    <div class="step-title">Arithmetic Mean ($A$):</div>
+                    <div class="math-box">
+                        $$ A = \frac{4 + 6.3 + 7.2}{3} = \frac{17.5}{3} \approx 5.833... $$
+                    </div>
+                    <div class="final-answer">A = 5.83</div>
+
+                    <div class="step-title">Geometric Mean ($G$):</div>
+                    <div class="math-box">
+                        $$ G = \sqrt[3]{4 \times 6.3 \times 7.2} = \sqrt[3]{181.44} \approx 5.6612... $$
+                    </div>
+                    <div class="final-answer">G = 5.66</div>
+
+                    <div class="step-title">Harmonic Mean ($H$):</div>
+                    <div class="math-box">
+                        $$ H = \frac{3}{\frac{1}{4} + \frac{1}{6.3} + \frac{1}{7.2}} = \frac{3}{0.25 + 0.15873... + 0.13888...} = \frac{3}{0.547619...} \approx 5.478... $$
+                    </div>
+                    <div class="final-answer">H = 5.48</div>
+                </div>
+
+                <div class="mb-8 border-b border-slate-100 pb-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">(b) Algebraic Proofs for scalar multiplier $b$</h3>
+                    <p class="text-slate-600 mb-4">Let $b$ be a positive real number. We must factor $b$ out of each formula.</p>
+                    
+                    <div class="step-title">(i) Show $A(bx_1, bx_2, \dots, bx_n) = bA(x_1, x_2, \dots, x_n)$</div>
+                    <div class="math-box">
+                        $$ A(bx_i) = \frac{bx_1 + bx_2 + \dots + bx_n}{n} $$
+                        $$ = \frac{b(x_1 + x_2 + \dots + x_n)}{n} $$
+                        $$ = b \cdot \left( \frac{x_1 + x_2 + \dots + x_n}{n} \right) = bA(x_1, \dots, x_n) \quad \blacksquare $$
+                    </div>
+
+                    <div class="step-title">(ii) Show $G(bx_1, bx_2, \dots, bx_n) = bG(x_1, x_2, \dots, x_n)$</div>
+                    <div class="math-box">
+                        $$ G(bx_i) = \sqrt[n]{(bx_1)(bx_2)\dots(bx_n)} $$
+                        $$ = \sqrt[n]{b^n (x_1 x_2 \dots x_n)} $$
+                        $$ = \sqrt[n]{b^n} \cdot \sqrt[n]{x_1 x_2 \dots x_n} = bG(x_1, \dots, x_n) \quad \blacksquare $$
+                    </div>
+
+                    <div class="step-title">(iii) Show $H(bx_1, bx_2, \dots, bx_n) = bH(x_1, x_2, \dots, x_n)$</div>
+                    <div class="math-box">
+                        $$ H(bx_i) = \frac{n}{\frac{1}{bx_1} + \frac{1}{bx_2} + \dots + \frac{1}{bx_n}} $$
+                        $$ = \frac{n}{\frac{1}{b} \left( \frac{1}{x_1} + \frac{1}{x_2} + \dots + \frac{1}{x_n} \right)} $$
+                        $$ = b \cdot \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \dots + \frac{1}{x_n}} = bH(x_1, \dots, x_n) \quad \blacksquare $$
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">(c) Is it possible to find a set of 10 numbers where A = G = H?</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <strong>Yes, it is possible.</strong> By the AM-GM-HM inequality ($A \ge G \ge H$), equality only holds true if and only if all numbers in the set are exactly identical.
+                    </p>
+                    <p class="text-slate-700 leading-relaxed">
+                        To fulfill the condition for 10 numbers, we simply pick a set where the same positive real number is repeated 10 times.
+                    </p>
+                    <div class="math-box text-center font-bold">
+                        Set: { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="solution-card">
+            <div class="bg-indigo-50 border-b border-indigo-100 p-5 font-black text-indigo-900 flex gap-3 items-center text-xl">
+                <span class="bg-indigo-600 text-white w-8 h-8 flex items-center justify-center rounded-full text-sm shadow-md">2</span>
+                Number Pattern with Algebra (Triangular Numbers)
+            </div>
+            <div class="p-8">
+                
+                <p class="text-slate-600 mb-6">Given the quadratic form $y = ax^2 + bx + c$, and we are told $c = 0$. Therefore, our base equation is $y = ax^2 + bx$.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 border-b border-slate-100 pb-8">
+                    <div>
+                        <h3 class="text-md font-bold text-slate-800 mb-2">(i) Equation for x = 1</h3>
+                        <p class="text-slate-600 text-sm mb-2">From the set, when $x=1, y=1$. Substitute into $y = ax^2 + bx$:</p>
+                        <div class="math-box p-3">
+                            $$ 1 = a(1)^2 + b(1) $$
+                            $$ \mathbf{a + b = 1} $$
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-md font-bold text-slate-800 mb-2">(ii) Equation for x = 2</h3>
+                        <p class="text-slate-600 text-sm mb-2">From the set, when $x=2, y=3$. Substitute into $y = ax^2 + bx$:</p>
+                        <div class="math-box p-3">
+                            $$ 3 = a(2)^2 + b(2) $$
+                            $$ \mathbf{4a + 2b = 3} $$
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8 border-b border-slate-100 pb-8">
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">(iii) State the values of a and b</h3>
+                    <p class="text-slate-600 mb-2">Solve the system of simultaneous equations:</p>
+                    <div class="math-box">
+                        <p>1) $b = 1 - a$</p>
+                        <p>2) Substitute into the second equation: $4a + 2(1 - a) = 3$</p>
+                        $$ 4a + 2 - 2a = 3 $$
+                        $$ 2a = 1 \implies \mathbf{a = 0.5} $$
+                        <p>3) Find b: $b = 1 - 0.5 \implies \mathbf{b = 0.5}$</p>
+                    </div>
+                    <p class="text-slate-700 mt-2 font-bold">The formula is: $y = 0.5x^2 + 0.5x$ (or $y = \frac{x^2+x}{2}$)</p>
+
+                    <h3 class="text-lg font-bold text-slate-800 mt-8 mb-3">(iv) State the value of the 50th triangular number</h3>
+                    <p class="text-slate-600 mb-2">Substitute $x = 50$ into our completed formula:</p>
+                    <div class="math-box">
+                        $$ y = 0.5(50)^2 + 0.5(50) $$
+                        $$ y = 0.5(2500) + 25 = 1250 + 25 = 1275 $$
+                    </div>
+                    <div class="final-answer">50th number = 1275</div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">Show that for any triangular number $y$, the number $32y + 4$ is always a perfect square.</h3>
+                    <p class="text-slate-600 mb-4">Take the algebraic expression for $y$ we found in part (iii), $y = \frac{1}{2}x^2 + \frac{1}{2}x$, and substitute it into $32y + 4$:</p>
+                    
+                    <div class="math-box">
+                        $$ 32y + 4 = 32\left(\frac{1}{2}x^2 + \frac{1}{2}x\right) + 4 $$
+                        $$ = 16x^2 + 16x + 4 $$
+                    </div>
+                    <p class="text-slate-600 mt-4 mb-2">Now, factor the resulting quadratic expression. We can factor out a common 4 first, or recognize it immediately as a perfect square trinomial:</p>
+                    <div class="math-box">
+                        $$ 16x^2 + 16x + 4 = 4(4x^2 + 4x + 1) $$
+                        $$ = 4(2x + 1)(2x + 1) $$
+                        $$ = 4(2x + 1)^2 $$
+                        $$ = \left[ 2(2x + 1) \right]^2 $$
+                        $$ = \mathbf{(4x + 2)^2} $$
+                    </div>
+                    <p class="text-slate-700 font-medium leading-relaxed mt-4">
+                        Because $x$ is a natural number ($x \in \mathbb{N}$), $4x + 2$ must be an integer. Therefore, the expression simplifies to the square of an integer, $(4x+2)^2$, proving that $32y + 4$ is always a perfect square. $\blacksquare$
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-slate-900 border-t-4 border-indigo-500 py-10 mt-auto w-full">
+        <div class="text-center">
+            <p class="text-sm font-mono font-bold text-slate-100 tracking-widest uppercase">Designed by Mr. Shen</p>
+            <p class="text-xs text-slate-500 mt-2 font-mono">© 2026 SHN Agency. Mathematical Solutions Module.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
