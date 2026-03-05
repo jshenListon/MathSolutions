@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCEA Level 3 Calculus | Exercise Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+    window.MathJax = {
+      tex: { 
+          inlineMath: [['$', '$'], ['\\(', '\\)']], 
+          displayMath: [['$$', '$$'], ['\\[', '\\]']], 
+          processEscapes: true 
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .solution-card { background-color: #ffffff; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); padding: 2rem; margin-bottom: 2rem; border: 1px solid #e2e8f0; }
+        .step-block { background-color: #f1f5f9; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6; margin-bottom: 1rem; overflow-x: auto; }
+        .question-title { font-weight: 800; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.25rem; }
+        .final-ans { background-color: #ecfdf5; border: 1px solid #10b981; padding: 1rem; border-radius: 0.5rem; color: #047857; font-weight: 600; margin-top: 1rem; }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-black text-slate-900 mb-2">NCEA Level 3 Calculus Solutions</h1>
+            <p class="text-slate-500 font-medium">Step-by-step worked solutions for Complex Equations and De Moivre's Theorem.</p>
+        </header>
+
+        <section class="mb-12">
+            <div class="flex items-center gap-3 mb-6 bg-blue-600 text-white p-4 rounded-xl shadow-md">
+                <i data-lucide="function-square" class="w-8 h-8"></i>
+                <h2 class="text-2xl font-bold">Complex Equations</h2>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 1</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Solve the equation $z^4 + 81k^8 = 0$, where $k$ is a real constant. Give your solution(s) in polar form in terms of $k$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Rearrange the equation</p>
+                    $$ z^4 = -81k^8 $$
+                    <p class="mt-2 text-sm text-slate-600">We must write the right-hand side in polar form ($r \text{ cis } \theta$). The modulus $r = 81k^8$, and since it's a negative real number, the base angle is $\pi$. We add $2n\pi$ to account for multiple rotations.</p>
+                    $$ z^4 = 81k^8 \text{ cis } (\pi + 2n\pi) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Apply De Moivre's Theorem (Fractional Powers)</p>
+                    $$ z = (81k^8)^{\frac{1}{4}} \text{ cis } \left( \frac{\pi + 2n\pi}{4} \right) $$
+                    $$ z = 3k^2 \text{ cis } \left( \frac{\pi}{4} + \frac{n\pi}{2} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 3: Substitute $n = 0, 1, 2, 3$ to find the 4 roots</p>
+                    <ul class="space-y-2">
+                        <li>$n = 0 \implies z_1 = 3k^2 \text{ cis } (\frac{\pi}{4})$</li>
+                        <li>$n = 1 \implies z_2 = 3k^2 \text{ cis } (\frac{\pi}{4} + \frac{2\pi}{4}) = 3k^2 \text{ cis } (\frac{3\pi}{4})$</li>
+                        <li>$n = 2 \implies z_3 = 3k^2 \text{ cis } (\frac{\pi}{4} + \frac{4\pi}{4}) = 3k^2 \text{ cis } (\frac{5\pi}{4}) \equiv 3k^2 \text{ cis } (-\frac{3\pi}{4})$</li>
+                        <li>$n = 3 \implies z_4 = 3k^2 \text{ cis } (\frac{\pi}{4} + \frac{6\pi}{4}) = 3k^2 \text{ cis } (\frac{7\pi}{4}) \equiv 3k^2 \text{ cis } (-\frac{\pi}{4})$</li>
+                    </ul>
+                </div>
+                <div class="final-ans">
+                    Final Roots: $3k^2 \text{ cis } (\frac{\pi}{4}), \quad 3k^2 \text{ cis } (\frac{3\pi}{4}), \quad 3k^2 \text{ cis } (-\frac{3\pi}{4}), \quad 3k^2 \text{ cis } (-\frac{\pi}{4})$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 3</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Solve the equation $z^3 + 64m^{12} = 0$, where $m$ is a real constant. Write your solution(s) in polar form, in terms of $m$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Rearrange and convert to polar</p>
+                    $$ z^3 = -64m^{12} $$
+                    $$ z^3 = 64m^{12} \text{ cis } (\pi + 2n\pi) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Apply De Moivre's Theorem</p>
+                    $$ z = (64m^{12})^{\frac{1}{3}} \text{ cis } \left( \frac{\pi + 2n\pi}{3} \right) $$
+                    $$ z = 4m^4 \text{ cis } \left( \frac{\pi}{3} + \frac{2n\pi}{3} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 3: Substitute $n = 0, 1, 2$</p>
+                    <ul class="space-y-2">
+                        <li>$n = 0 \implies z_1 = 4m^4 \text{ cis } (\frac{\pi}{3})$</li>
+                        <li>$n = 1 \implies z_2 = 4m^4 \text{ cis } (\frac{\pi}{3} + \frac{2\pi}{3}) = 4m^4 \text{ cis } (\pi)$</li>
+                        <li>$n = 2 \implies z_3 = 4m^4 \text{ cis } (\frac{\pi}{3} + \frac{4\pi}{3}) = 4m^4 \text{ cis } (\frac{5\pi}{3}) \equiv 4m^4 \text{ cis } (-\frac{\pi}{3})$</li>
+                    </ul>
+                </div>
+                <div class="final-ans">
+                    Final Roots: $4m^4 \text{ cis } (\frac{\pi}{3}), \quad 4m^4 \text{ cis } (\pi), \quad 4m^4 \text{ cis } (-\frac{\pi}{3})$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 4</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Solve the equation $z^3 + k^6i = 0$, where $k$ is a real constant. Give your solution(s) in polar form in terms of $k$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Rearrange and convert to polar</p>
+                    $$ z^3 = -k^6i $$
+                    <p class="mt-2 text-sm text-slate-600">The complex number lies entirely on the negative imaginary axis, so the angle is $-\frac{\pi}{2}$.</p>
+                    $$ z^3 = k^6 \text{ cis } (-\frac{\pi}{2} + 2n\pi) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Apply De Moivre's Theorem</p>
+                    $$ z = (k^6)^{\frac{1}{3}} \text{ cis } \left( \frac{-\frac{\pi}{2} + 2n\pi}{3} \right) $$
+                    $$ z = k^2 \text{ cis } \left( -\frac{\pi}{6} + \frac{2n\pi}{3} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 3: Substitute $n = 0, 1, 2$</p>
+                    <ul class="space-y-2">
+                        <li>$n = 0 \implies z_1 = k^2 \text{ cis } (-\frac{\pi}{6})$</li>
+                        <li>$n = 1 \implies z_2 = k^2 \text{ cis } (-\frac{\pi}{6} + \frac{4\pi}{6}) = k^2 \text{ cis } (\frac{3\pi}{6}) = k^2 \text{ cis } (\frac{\pi}{2})$</li>
+                        <li>$n = 2 \implies z_3 = k^2 \text{ cis } (-\frac{\pi}{6} + \frac{8\pi}{6}) = k^2 \text{ cis } (\frac{7\pi}{6}) \equiv k^2 \text{ cis } (-\frac{5\pi}{6})$</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 4(d)</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Solve the equation $z^3 = k^6 + k^6i$, where $k$ is a real constant.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Convert RHS to polar</p>
+                    <p class="mt-2 text-sm text-slate-600">Modulus $r = \sqrt{(k^6)^2 + (k^6)^2} = \sqrt{2k^{12}} = \sqrt{2}k^6$. <br> Argument $\theta = \tan^{-1}(k^6/k^6) = \frac{\pi}{4}$.</p>
+                    $$ z^3 = \sqrt{2}k^6 \text{ cis } (\frac{\pi}{4} + 2n\pi) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Apply De Moivre's Theorem</p>
+                    $$ z = (\sqrt{2}k^6)^{\frac{1}{3}} \text{ cis } \left( \frac{\frac{\pi}{4} + 2n\pi}{3} \right) $$
+                    $$ z = 2^{\frac{1}{6}}k^2 \text{ cis } \left( \frac{\pi}{12} + \frac{2n\pi}{3} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 3: Substitute $n = 0, 1, 2$</p>
+                    <ul class="space-y-2">
+                        <li>$n = 0 \implies z_1 = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{\pi}{12})$</li>
+                        <li>$n = 1 \implies z_2 = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{\pi}{12} + \frac{8\pi}{12}) = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{9\pi}{12}) = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{3\pi}{4})$</li>
+                        <li>$n = 2 \implies z_3 = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{\pi}{12} + \frac{16\pi}{12}) = 2^{\frac{1}{6}}k^2 \text{ cis } (\frac{17\pi}{12}) \equiv 2^{\frac{1}{6}}k^2 \text{ cis } (-\frac{7\pi}{12})$</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 5</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Find the roots of the equation $z^2 - 6z + 25 = 0$ giving your answers in the form of $x+iy$ where $x$ and $y$ are real.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Apply the Quadratic Formula</p>
+                    $$ a = 1, \quad b = -6, \quad c = 25 $$
+                    $$ z = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+                    $$ z = \frac{6 \pm \sqrt{(-6)^2 - 4(1)(25)}}{2} $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Simplify the Discriminant</p>
+                    $$ z = \frac{6 \pm \sqrt{36 - 100}}{2} $$
+                    $$ z = \frac{6 \pm \sqrt{-64}}{2} $$
+                    $$ z = \frac{6 \pm 8i}{2} $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 3: Final Answers</p>
+                    $$ z = 3 \pm 4i $$
+                </div>
+                <div class="final-ans">
+                    Final Roots: $z_1 = 3 + 4i, \quad z_2 = 3 - 4i$
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="mb-12">
+            <div class="flex items-center gap-3 mb-6 bg-purple-600 text-white p-4 rounded-xl shadow-md">
+                <i data-lucide="pi" class="w-8 h-8"></i>
+                <h2 class="text-2xl font-bold">Operators and De Moivre</h2>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 1</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    If $v = 4 \text{ cis } \frac{3\pi}{4}$ and $w = 6 \text{ cis } \frac{2\pi}{3}$, write the exact value of $\frac{v}{w}$ in polar form.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Apply division rules for polar form</p>
+                    <p class="mt-2 text-sm text-slate-600">When dividing complex numbers in polar form, divide the moduli and subtract the arguments.</p>
+                    $$ \frac{v}{w} = \frac{4}{6} \text{ cis } \left( \frac{3\pi}{4} - \frac{2\pi}{3} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Find common denominator for the arguments</p>
+                    $$ \frac{v}{w} = \frac{2}{3} \text{ cis } \left( \frac{9\pi}{12} - \frac{8\pi}{12} \right) $$
+                </div>
+                <div class="final-ans">
+                    Final Answer: $\frac{2}{3} \text{ cis } \left( \frac{\pi}{12} \right)$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 2</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    If $u = 12k^3 \text{ cis }(\pi)$ and $v = 2k \text{ cis }(\frac{\pi}{3})$ write the exact value of $\frac{u}{v}$ in polar form.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Apply division rules</p>
+                    $$ \frac{u}{v} = \frac{12k^3}{2k} \text{ cis } \left( \pi - \frac{\pi}{3} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Simplify</p>
+                    $$ \frac{u}{v} = 6k^2 \text{ cis } \left( \frac{3\pi}{3} - \frac{\pi}{3} \right) $$
+                </div>
+                <div class="final-ans">
+                    Final Answer: $6k^2 \text{ cis } \left( \frac{2\pi}{3} \right)$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 3</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    If $u = m \text{ cis }(\frac{3\pi}{10})$ write $u^5$ in the form $a+bi$, where $a$ and $b$ are both real numbers, giving your answer in terms of $m$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Apply De Moivre's Theorem</p>
+                    $$ u^5 = (m \text{ cis } (\frac{3\pi}{10}))^5 $$
+                    $$ u^5 = m^5 \text{ cis } \left( 5 \times \frac{3\pi}{10} \right) $$
+                    $$ u^5 = m^5 \text{ cis } \left( \frac{15\pi}{10} \right) = m^5 \text{ cis } \left( \frac{3\pi}{2} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Convert to rectangular ($a+bi$) form</p>
+                    <p class="mt-2 text-sm text-slate-600">Recall that $\text{cis }(\theta) = \cos(\theta) + i\sin(\theta)$.</p>
+                    $$ u^5 = m^5 \left( \cos(\frac{3\pi}{2}) + i\sin(\frac{3\pi}{2}) \right) $$
+                    $$ u^5 = m^5 \left( 0 + i(-1) \right) $$
+                    $$ u^5 = -m^5i $$
+                </div>
+                <div class="final-ans">
+                    Final Answer: $a = 0, \quad b = -m^5 \implies -m^5i$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 4</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    If $z = m \text{ cis }(\frac{n\pi}{5})$, where $m$ and $n$ are positive real constants, then find $z^{15}$ giving your answer in polar form, in terms of $m$ and $n$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 1: Apply De Moivre's Theorem</p>
+                    $$ z^{15} = \left( m \text{ cis } (\frac{n\pi}{5}) \right)^{15} $$
+                    $$ z^{15} = m^{15} \text{ cis } \left( 15 \times \frac{n\pi}{5} \right) $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-blue-800">Step 2: Simplify the argument</p>
+                    $$ z^{15} = m^{15} \text{ cis } (3n\pi) $$
+                </div>
+                <div class="final-ans">
+                    Final Answer: $m^{15} \text{ cis } (3n\pi)$
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
