@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCEA Level 3 Calculus | Locus Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+    window.MathJax = {
+      tex: { 
+          inlineMath: [['$', '$'], ['\\(', '\\)']], 
+          displayMath: [['$$', '$$'], ['\\[', '\\]']], 
+          processEscapes: true 
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .solution-card { background-color: #ffffff; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); padding: 2rem; margin-bottom: 2rem; border: 1px solid #e2e8f0; }
+        .step-block { background-color: #f1f5f9; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #3b82f6; margin-bottom: 1rem; overflow-x: auto; }
+        .question-title { font-weight: 800; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.25rem; }
+        .final-ans { background-color: #ecfdf5; border: 1px solid #10b981; padding: 1rem; border-radius: 0.5rem; color: #047857; font-weight: 600; margin-top: 1rem; }
+    </style>
+</head>
+<body class="min-h-screen p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-black text-slate-900 mb-2">NCEA Level 3 Calculus Solutions</h1>
+            <p class="text-slate-500 font-medium">Step-by-step worked solutions for Locus Equations (Complex Numbers).</p>
+        </header>
+
+        <section class="mb-12">
+            <div class="flex items-center gap-3 mb-6 bg-indigo-600 text-white p-4 rounded-xl shadow-md">
+                <i data-lucide="compass" class="w-8 h-8"></i>
+                <h2 class="text-2xl font-bold">Locus Equations</h2>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 1</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    Find the Cartesian equation of the locus described by $|z+i|=2|z-5i|$ in the form $(x-a)^2+(y-b)^2=k^2$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 1: Substitute $z = x + iy$</p>
+                    $$ |x + iy + i| = 2|x + iy - 5i| $$
+                    $$ |x + i(y+1)| = 2|x + i(y-5)| $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 2: Apply the modulus formula $\sqrt{x^2 + y^2}$ and square both sides</p>
+                    $$ \sqrt{x^2 + (y+1)^2} = 2\sqrt{x^2 + (y-5)^2} $$
+                    $$ x^2 + (y+1)^2 = 4[x^2 + (y-5)^2] $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 3: Expand and group like terms</p>
+                    $$ x^2 + y^2 + 2y + 1 = 4(x^2 + y^2 - 10y + 25) $$
+                    $$ x^2 + y^2 + 2y + 1 = 4x^2 + 4y^2 - 40y + 100 $$
+                    <p class="mt-2 text-sm text-slate-600">Move everything to the right side:</p>
+                    $$ 0 = 3x^2 + 3y^2 - 42y + 99 $$
+                    $$ x^2 + y^2 - 14y + 33 = 0 $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 4: Complete the square for y</p>
+                    $$ x^2 + (y^2 - 14y + 49) - 49 + 33 = 0 $$
+                    $$ x^2 + (y-7)^2 - 16 = 0 $$
+                </div>
+                
+                <div class="final-ans">
+                    Final Equation: $x^2 + (y-7)^2 = 16$  &nbsp;&nbsp; *(Circle with center (0,7) and radius 4)*
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 2</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    The straight line with equation $y=mx-1$, where $m$ is a real constant and $m>0$, is a tangent to the locus described by $|z-2+i|=\sqrt{3}$. Find the Cartesian equation of the locus AND the value of $m$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 1: Find the Cartesian equation of the locus</p>
+                    $$ |x + iy - 2 + i| = \sqrt{3} $$
+                    $$ |(x-2) + i(y+1)| = \sqrt{3} $$
+                    $$ (x-2)^2 + (y+1)^2 = 3 $$
+                    <p class="text-sm text-slate-600 mt-2">This is a circle centered at $(2, -1)$ with radius $\sqrt{3}$.</p>
+                    
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 2: Substitute the line equation into the circle equation</p>
+                    <p class="text-sm text-slate-600 mb-2">Substitute $y = mx - 1$ into the circle equation:</p>
+                    $$ (x-2)^2 + (mx - 1 + 1)^2 = 3 $$
+                    $$ (x-2)^2 + (mx)^2 = 3 $$
+                    $$ x^2 - 4x + 4 + m^2x^2 - 3 = 0 $$
+                    $$ (1+m^2)x^2 - 4x + 1 = 0 $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 3: Use the Discriminant for tangency</p>
+                    <p class="text-sm text-slate-600 mb-2">Because the line is a tangent, it intersects the circle at exactly one point, meaning the discriminant ($\Delta = b^2 - 4ac$) must equal 0.</p>
+                    $$ a = 1+m^2, \quad b = -4, \quad c = 1 $$
+                    $$ (-4)^2 - 4(1+m^2)(1) = 0 $$
+                    $$ 16 - 4 - 4m^2 = 0 $$
+                    $$ 12 = 4m^2 \implies m^2 = 3 $$
+                    <p class="text-sm text-slate-600 mt-2">Since we are given $m > 0$, we take the positive root.</p>
+                </div>
+                <div class="final-ans">
+                    Cartesian Equation: $(x-2)^2 + (y+1)^2 = 3$ <br>
+                    Value of m: $m = \sqrt{3}$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 3</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    The locus of a complex number z is described by $|z-1-7i|=2|z-4-4i|$. The complex number $u=3+di$ lies on this locus. Find the Cartesian equation of the locus of z, giving your answer in the form $(x-a)^2+(y-b)^2=k$ and also find the complex number(s) $u$.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 1: Cartesian Equation of the Locus</p>
+                    $$ |x-1 + i(y-7)| = 2|x-4 + i(y-4)| $$
+                    $$ (x-1)^2 + (y-7)^2 = 4[(x-4)^2 + (y-4)^2] $$
+                    $$ x^2 - 2x + 1 + y^2 - 14y + 49 = 4(x^2 - 8x + 16 + y^2 - 8y + 16) $$
+                    $$ x^2 + y^2 - 2x - 14y + 50 = 4x^2 + 4y^2 - 32x - 32y + 128 $$
+                    $$ 3x^2 + 3y^2 - 30x - 18y + 78 = 0 $$
+                    <p class="text-sm text-slate-600 mt-2">Divide by 3:</p>
+                    $$ x^2 + y^2 - 10x - 6y + 26 = 0 $$
+                    $$ (x-5)^2 - 25 + (y-3)^2 - 9 + 26 = 0 $$
+                    $$ (x-5)^2 + (y-3)^2 = 8 $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 2: Substitute $u = 3+di$ to find $d$</p>
+                    <p class="text-sm text-slate-600 mb-2">This means $x=3$ and $y=d$ must satisfy the equation of the circle.</p>
+                    $$ (3-5)^2 + (d-3)^2 = 8 $$
+                    $$ (-2)^2 + (d-3)^2 = 8 $$
+                    $$ 4 + (d-3)^2 = 8 \implies (d-3)^2 = 4 $$
+                    $$ d-3 = \pm 2 $$
+                    $$ d = 5 \quad \text{or} \quad d = 1 $$
+                </div>
+                <div class="final-ans">
+                    Cartesian Equation: $(x-5)^2 + (y-3)^2 = 8$ <br>
+                    Complex Numbers: $u = 3+5i$ or $u = 3+i$
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 4</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    The locus described by $|z-i|=|z+1|$ is a straight line. Find the gradient of that line. Justify your answer.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 1: Algebraic Justification</p>
+                    $$ |x + i(y-1)| = |x+1 + iy| $$
+                    $$ x^2 + (y-1)^2 = (x+1)^2 + y^2 $$
+                    $$ x^2 + y^2 - 2y + 1 = x^2 + 2x + 1 + y^2 $$
+                    $$ -2y = 2x $$
+                    $$ y = -x $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 2: Geometric Justification</p>
+                    <p class="text-slate-700">The equation $|z-i|=|z+1|$ geometrically represents the locus of all points $z$ that are equidistant from the points $(0,1)$ and $(-1,0)$. This forms the <strong>perpendicular bisector</strong> of the line segment joining those two points.</p>
+                    
+                </div>
+                
+                <div class="final-ans">
+                    Gradient: $m = -1$ <br>
+                    Justification: The line is $y = -x$, which clearly has a gradient of -1.
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="question-title">Question 5</h3>
+                <div class="mb-4 text-slate-700 font-medium border-l-4 border-slate-300 pl-4 py-1 bg-slate-50">
+                    The locus of a complex number z is described by $|z-5i|-|z+5i|=4$. Find the Cartesian equation of the locus of z, giving your answer in the form $ay^2-bx^2=k$, where a, b, k are constants.
+                </div>
+                
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 1: Set up the algebraic equation</p>
+                    $$ \sqrt{x^2 + (y-5)^2} - \sqrt{x^2 + (y+5)^2} = 4 $$
+                    <p class="text-sm text-slate-600 mt-2">Isolate one of the square roots to square both sides:</p>
+                    $$ \sqrt{x^2 + (y-5)^2} = 4 + \sqrt{x^2 + (y+5)^2} $$
+                    
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 2: Square both sides</p>
+                    $$ x^2 + (y-5)^2 = 16 + 8\sqrt{x^2 + (y+5)^2} + [x^2 + (y+5)^2] $$
+                    $$ x^2 + y^2 - 10y + 25 = 16 + 8\sqrt{x^2 + (y+5)^2} + x^2 + y^2 + 10y + 25 $$
+                    <p class="text-sm text-slate-600 mt-2">Cancel $x^2, y^2, 25$ from both sides and group terms:</p>
+                    $$ -20y - 16 = 8\sqrt{x^2 + (y+5)^2} $$
+                    <p class="text-sm text-slate-600 mt-2">Divide by 4 to simplify before squaring again:</p>
+                    $$ -5y - 4 = 2\sqrt{x^2 + (y+5)^2} $$
+                </div>
+
+                <div class="step-block">
+                    <p class="font-bold mb-2 text-indigo-800">Step 3: Square both sides again</p>
+                    $$ (-5y - 4)^2 = 4[x^2 + (y+5)^2] $$
+                    $$ 25y^2 + 40y + 16 = 4(x^2 + y^2 + 10y + 25) $$
+                    $$ 25y^2 + 40y + 16 = 4x^2 + 4y^2 + 40y + 100 $$
+                    <p class="text-sm text-slate-600 mt-2">Cancel the $40y$ and group the $x$ and $y$ variables:</p>
+                    $$ 21y^2 - 4x^2 = 84 $$
+                </div>
+                
+                <div class="final-ans">
+                    Final Equation: $21y^2 - 4x^2 = 84$  &nbsp;&nbsp; *(This is a Hyperbola)*
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
